@@ -1,0 +1,96 @@
+@import 'normalize.scss';
+@import 'global.scss';
+
+.header {
+  text-align: center;
+  color: blue;
+  font-size: 5vmax;
+  line-height: 0;
+  opacity: 0.5;
+  font-style: italic; 
+}
+.pointsWrap {
+  width: 50vmax;
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 60px 40px 40px 0.5fr 120px;
+  grid-template-areas: "status points cross score . newGame";
+}
+.status {
+  grid-area: status;
+  font-size: 40px;
+  color: #f00;
+}
+.points {
+  grid-area: points;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url('../img/mouse.png');
+  background-size: cover;
+}
+.cross {
+  grid-area: cross;
+  text-align: center;
+  font-size: 40px;
+}
+.score {
+  grid-area: score;
+  text-align: center;
+  padding-top: 5px;
+  font-size: 40px;
+}
+.newGame {
+  grid-area: newGame;
+  height: 80%;
+  font-size: 20px;
+  border: 2px solid blue;
+  border-radius: 6px;
+  background-color: rgba(#00f, 0.3);
+  color: #00f;
+  cursor: pointer;
+}
+.newGame:hover {
+  background-color: rgba(#00f, 0.4);
+}
+.newGame:active {
+  background-color: rgba(#00f, 0.6);
+  color: #fff;
+}
+.description {
+  font-size: 24px;
+  color: #00f;
+  opacity: 0.5;
+  line-height: 1.5;
+  display: block;
+  text-align: center;
+}
+.field {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: minmax(10, 1fr);
+  width: 50vmax;
+  max-width: 700px;
+  height: 50vmax;
+  max-height: 700px;
+  margin: 0 auto;
+  border: 2px solid #00f;
+}
+.cell {
+  background-color: #bbb;
+  border: 1px solid #fff;
+  background-size: cover;
+}
+.cell-snakeHead {
+  background-image: url('../img/head.jpg');
+}
+.cell-snakeBody {
+  background-image: url('../img/body.png');
+}
+.cell-mouse {
+  background-image: url('../img/mouse.png');
+}
+.cell-crash {
+  background-image: url('../img/crach.jpg');
+}
